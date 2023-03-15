@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Home</title>
+</head>
+<body>
+    <h1>WELCOME TO MYAPP</h1>
+    <button type="button"  id="refresh">REFRESH</button>
+    <%if(!activeUser){%>
+    <button type="button"><a href="login">Login</a></button>
+    <button type="button"><a href="register">Register</a></button>
+    <%}%>
+    <%if(activeUser){%>
+      <div id="my_div">
+        <button type="button"><a href="logout">Logout</a></button>
+        <button type="button"><a href="transaction/buy-sell">BUY/SELL</a></button>
+      </div>
+        
+    <%}%>
+
+    <table class="table" id="board">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">USERNME</th>
+            <th scope="col">SCORE</th>
+            
+          </tr>
+        </thead>
+      </table>
+      
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" ></script>
+  
+</body>
+</html>

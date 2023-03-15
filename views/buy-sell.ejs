@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY-SELL</title>
+</head>
+<body>
+    <form action="/transaction/buy" method="post">
+        <div class="container">
+         <label for="buy"><b>BUY</b></label>
+          <input type="number" step="0.01" placeholder=0 name="buy" required>
+          <button type="submit">BUY</button>
+        </div>       
+      </form>
+
+      <form action="/transaction/sell" method="post">
+        <div class="container">
+         <label for="sell"><b>SELL</b></label>
+          <input type="number" step="0.01" placeholder=0 name="sell" required>
+          <button type="submit">SELL</button>
+        </div>       
+      </form>
+</body>
+</html>
