@@ -1,4 +1,5 @@
 The project demanded real-time leaderboard for 1 million users where there can be 100 transactions per user per second.
+#
 So, first point of design was a normal web server using a database to register transactions of user and fetching top 50 and rank of logged in user whenever asked but due to size of users this design would cause significant lag in fetching results to user and hence the result seen by user would not be real time or rather faulty.
 So seeing this, I thought of using a in store database which produces top 50 and rank of logged in user at a more efficiently and the changes in main database can be made in background.
 So after this entire analysis, redis was used as in store database due to sorted set data structure it provides. This data structures allows to fetch top k users in logarithmic time.
